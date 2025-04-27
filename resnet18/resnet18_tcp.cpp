@@ -49,7 +49,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "🚪 Listening on port " << PORT << "...\n";
+    std::cout << "Listening on port " << PORT << "...\n";
 
     client_fd = accept(server_fd, (struct sockaddr*)&address, &addrlen);
     if (client_fd < 0) {
@@ -58,7 +58,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "🔗 Connected to client\n";
+    std::cout << "Connected to client\n";
 
     while (true) {
         uint8_t header[HEADER_SIZE];
@@ -81,7 +81,7 @@ int main() {
             break;
         }
 
-        // 🚧 Optional: Process tensor here
+        // Optional: Process tensor here
         std::cout << "Tensor " << tensor_id << " received.\n";
 
         // Free immediately
